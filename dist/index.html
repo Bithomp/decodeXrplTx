@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Bithomp-decode</title>
+</head>
+<body>
+  TX blob: <input id="tx" />
+  <br><br>
+  <button id="decode">Decode</button>
+  <br><br>
+  <pre id="output"></pre>
+  <script src="decodeXrplTx.min.js"></script>
+  <script>
+    var output = document.getElementById("output");
+    document.getElementById("decode").onclick = function() {
+      var tx = document.getElementById("tx").value;
+      var txJson = decodeXrplTx.decodeTx(tx);
+      output.innerHTML = JSON.stringify(txJson, null, 2);
+    }
+  </script>
+</body>
+</html>
