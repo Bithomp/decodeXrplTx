@@ -1,4 +1,4 @@
-# bithomp-decode
+# decodeXrplTx
 JS lib to decode XRPL transaction
 
 ##
